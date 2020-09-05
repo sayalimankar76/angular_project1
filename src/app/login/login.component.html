@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="row" style="height: 100vh">
+
+        <div class="col-6 bg-light d-flex flex-column justify-content-center align-items-center">
+
+            <div><img src="assets/img8.jpeg"></div>
+
+        </div>
+
+        <div class="col-6  d-flex flex-column justify-content-center align-items-center" [formGroup]="fbFormGroup"
+            style="background-color: darkcyan;">
+
+
+            <div class="alert  text-danger" role="alert" *ngIf="uiInvalidCredential">
+                incorrect username or password
+            </div>
+
+
+            <div class="h4">Login Here</div>
+
+            <div class="mt-2">
+
+                <input type="text" placeholder="Enter Username" class="form-control" formControlName="username" />
+            </div>
+
+            <div class="mt-2">
+                <input type="password" placeholder="Enter Password" class="form-control" formControlName="password" />
+
+            </div>
+
+            <button class="btn btn-info mt-2 mb-2" [disabled]="!fbFormGroup.valid" (click)="loginHere()"
+                style="width: 18vw;height: 7vh; background-color: black;">
+                Login
+            </button>
+
+            <div>
+                <a routerLink="/forgot" style="font-size: 13px; color: black;">Forgot Password?</a>
+
+            </div>
+
+            <div>
+                <a routerLink="/signup" style="font-size: 13px; color: black;">Register Yourself</a>
+            </div>
+        </div>
+
+
+    </div>
+</div>

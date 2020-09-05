@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="row bg-primary sticky-top" style="height: 55px">
+        <div class="col text-light d-flex align-items-center" style="font-size: 20px; margin-right: 8px">
+            Budget Application
+        </div>
+
+        <div class="col d-flex justify-content-end align-items-center">
+            <a class="btn btn-outline-light mr-1" routerLink="/home/">Home</a>
+            <a class="btn btn-outline-light mr-1" routerLink="/home/budget">
+                Find Budget
+            </a>
+
+            <a class="btn btn-outline-light mr-1" routerLink="/home/aboutus">
+                About Us
+            </a>
+
+            <button class="btn btn-outline-light mr-1" (click)="processLogout()">
+                Log Out
+            </button>
+        </div>
+    </div>
+
+
+
+    <router-outlet></router-outlet>
+
+</div>

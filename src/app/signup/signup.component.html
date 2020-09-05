@@ -1,0 +1,66 @@
+<div class="container-fluid">
+    <div class="row" style="height: 100vh;">
+        <div class="col-6 bg-light d-flex flex-column justify-content-center align-items-center">
+
+            <div><img src="assets/img8.jpeg"></div>
+
+        </div>
+
+
+
+
+
+
+
+        <div class="col-6  d-flex flex-column justify-content-center align-items-center" [formGroup]="fbFormGroup"
+            style="background-color: darkcyan;">
+
+
+            <div class="h4">Create account</div>
+
+            <div class="mt-2">
+
+                <input type="text" placeholder="Username" class="form-control" formControlName="username" />
+            </div>
+
+
+            <div class="mt-2">
+
+                <input type="email" placeholder="Email" class="form-control" formControlName="email" />
+            </div>
+
+            <div class="mt-2">
+
+                <input type="text" placeholder="Mobile" class="form-control" formControlName="mobile" />
+            </div>
+
+            <div class="mt-2">
+
+                <input type="password" placeholder="Password" required minlength="4" maxlength="8" class="form-control"
+                    formControlName="password" />
+            </div>
+
+            <div class="mt-2">
+
+                <input type="password" placeholder="Password again" required minlength="4" maxlength="8"
+                    class="form-control" formControlName="passwordagain" />
+            </div>
+
+            <button class="btn btn-sm btn-info mt-2 mb-2" [disabled]="!fbFormGroup.valid" (click)="registerHere()"
+                style="background-color: black;">
+                Register
+            </button>
+
+            <div>
+                <p style="font-size: 11px; font-weight: 500;">Already have an account? <a routerLink="/login"
+                        style="color: black;">sign
+                        in</a>
+                </p>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>

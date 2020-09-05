@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <div class="row" style="height: 100vh">
+
+        <div class="col-6 bg-light d-flex flex-column justify-content-center align-items-center">
+            <div class="col-6 bg-light d-flex flex-column justify-content-center align-items-center">
+
+                <div><img src="assets/img8.jpeg"></div>
+
+            </div>
+        </div>
+
+        <div class="col-6  d-flex flex-column justify-content-center align-items-center" [formGroup]="fbFormGroup"
+            style="background-color: darkcyan;">
+
+            <div class="h4">Reset Password</div>
+
+            <div class="mt-2">
+
+                <input type="text" placeholder="Enter Username" class="form-control" formControlName="username" />
+            </div>
+
+            <div class="mt-2">
+
+                <input type="password" placeholder="Password" class="form-control" formControlName="password" />
+            </div>
+
+            <div class="mt-2">
+
+                <input type="text" placeholder="Confirm password" class="form-control"
+                    formControlName="confirmpassword" />
+            </div>
+
+            <button class="btn btn-sm btn-info mt-2 mb-2" [disabled]="!fbFormGroup.valid" (click)="confirmHere()"
+                style="background-color: black;">
+                Confirm
+            </button>
+
+            <div>
+                <a routerLink="/login" style="font-size: 15px;" style="color: black;">Login</a>
+
+            </div>
+
+        </div>
+    </div>

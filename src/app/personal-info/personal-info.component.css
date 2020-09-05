@@ -1,0 +1,10 @@
+.col{
+    background-image: url('C:/Users/User/Desktop/my-app3/src/assets/img5.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: absolute;
+
+    height: 100%;
+    width: 100%;
+    
+}
